@@ -1,0 +1,52 @@
+.txt-hide {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+.labl-hold {
+  display: inline-block;
+  margin: 20px 0;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+}
+
+.labl-hold::before {
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+  vertical-align: -5px;
+  border: 1px solid black;
+}
+
+.labl-hold::after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 22px;
+  width: 22px;
+  height: 22px;
+  background: url(images/checkmark.png) no-repeat 0 / 22px;
+  transition: 0.3s ease;
+  opacity: 0;
+}
+
+/* 포커싱 이벤트가 일어나면 무조건 작동하는 :focus 와는 다르게 키보드 입력이 일어났을 경우만 가상클래스를 적용하게 합니다.
+
+특히 접근성을 위해 사용하는 경우 마우스 이벤트로도 작동하는 focus는 시각적인 불편함과 체크를 해제했음에도 포커스되어 있다는 이유로 작동하는 혼란을 줄 수 있기 때문에 focus-visible 이 더 효과적이라고 볼 수 있습니다. */
+.inp-hold:focus-visible + .labl-hold::before {
+  outline: 2px solid #000;
+  /* 상하좌우 공간 */
+  outline-offset: 5px;
+}
+
+.inp-hold:checked + .labl-hold::after {
+  left: 1px;
+  opacity: 1;
+}
