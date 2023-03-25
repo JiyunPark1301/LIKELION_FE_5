@@ -1,0 +1,289 @@
+body,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+img {
+  vertical-align: top;
+  max-width: 100%;
+}
+
+button {
+  background-color: none;
+  border: 0;
+  padding: 0;
+  font-size: inherit;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+strong {
+  font-weight: inherit;
+}
+
+.header {
+  background-color: #f2e9d8;
+  /* padding: 26px 0; */
+}
+
+.wrapper {
+  max-width: 1280px;
+  /* box-shadow: inset 0 0 20px yellow; */
+  margin: 0 auto;
+  padding: 0 36px;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  padding: 26px 0;
+}
+
+.header-title {
+  /* box-shadow: inset 0 0 20px blue; */
+}
+
+.header-title img {
+  width: 130px;
+}
+
+.header-nav {
+  /* box-shadow: inset 0 0 20px lime; */
+  margin-left: auto;
+}
+
+.header-nav ul {
+  display: flex;
+}
+
+.header-nav ul li a {
+  padding: 10px 15px;
+  display: inline-block;
+}
+
+.btn {
+  color: #fff;
+  background-color: #d97652;
+  border-radius: 40px;
+  padding: 15px 30px;
+  display: inline-block;
+}
+
+.download-btn {
+  margin-left: 35px;
+}
+
+.banner-section {
+  background-color: #f2e9d8;
+}
+
+.banner-inner {
+  /* box-shadow: inset 0 0 20px red; */
+  display: flex;
+  align-items: center;
+  gap: 128px;
+  overflow: hidden;
+}
+
+.banner-left {
+  /* background-color: salmon; */
+}
+
+.banner-title {
+  font-weight: 700;
+  font-size: 48px;
+  margin-bottom: 40px;
+}
+
+.banner-content {
+  margin-bottom: 40px;
+  max-width: 439px;
+}
+
+.banner-img {
+  margin-bottom: -125px;
+  /* background-color: pink; */
+}
+
+.cat-section {
+  box-shadow: inset 0 0 20px red;
+  padding: 80px 0;
+}
+
+.cat-inner {
+  display: flex;
+  gap: 110px;
+  align-items: center;
+}
+
+.cat-left {
+  flex-basis: 660px;
+  flex-shrink: 0;
+  aspect-ratio: 660 / 390;
+  /* min-width: 0; */
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+  background-color: salmon;
+}
+
+.cat-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cat-right {
+  flex-grow: 1;
+  min-width: 0;
+  background-color: pink;
+}
+
+.cat-title {
+  font-weight: 700;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.cats-section {
+  /* overflow: hidden; */
+}
+
+.cats-inner {
+  padding-top: 40px;
+  padding-bottom: 90px;
+}
+
+.cats-title {
+  color: #d97652;
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cats-content {
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 88px;
+}
+
+.cats-content strong {
+  color: #d97652;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: inset 0 0 20px blue;
+  row-gap: 72px;
+  margin-left: -36px;
+  margin-right: -36px;
+  margin-bottom: 90px;
+}
+
+.card-item {
+  box-shadow: inset 0 0 20px red;
+  flex-basis: 33.333333%;
+  padding: 0 36px;
+  box-sizing: border-box;
+}
+
+.card-item img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 30px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.learn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 52px;
+  margin-bottom: 90px;
+}
+
+.subscribe-article {
+  max-width: 1280px;
+  width: 100%;
+  background-color: #263140;
+  color: #fff;
+  padding: 50px 58px;
+  /* height: 200px; */
+  box-sizing: border-box;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 143px;
+  margin-top: -100px;
+  position: absolute;
+}
+
+.subscribe-content {
+}
+
+.subscribe-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+form {
+  flex-grow: 1;
+  position: relative;
+}
+
+.subscribe-input {
+  padding: 20px 140px 20px 64px;
+  width: 100%;
+  border-radius: 60px;
+  border: 0;
+  box-sizing: border-box;
+  background: white url(img/mail.svg) no-repeat 30px center / 20px;
+}
+
+.subscribe-input:focus {
+  outline: none;
+}
+
+.subscribe-btn {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+}
+
+.background-content {
+  height: 340px;
+  position: relative;
+  background: url(img/img_5.jpg) no-repeat top 38% right 0 / cover;
+}
+
+.background-content::before {
+  content: '';
+  background-color: #f2e9d8;
+  position: absolute;
+  inset: 0;
+  opacity: 0.6;
+}
