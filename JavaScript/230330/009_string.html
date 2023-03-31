@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      let txt = 'ABCDEFGHIJK';
+
+      console.log(txt + txt);
+      console.log(txt[0]); // Sass 1, 다른 프로그래밍 랭귀지는 0부터 시작합니다.
+      console.log(txt[2]);
+      cocnsole.log(txt[-1]); // 자바스크립트에서는 마이너스 인덱싱을 허락하지 않습니다.
+      console.log(txt.length);
+      console.log(txt.indexOf('E'));
+      console.log(txt.search('E'));
+
+      console.log(txt.indexOf('Z')); // 없는 값은 -1
+      console.log(txt.search('Z')); // 없는 값은 -1
+
+      let regExp = /CD/;
+      console.log(txt.search(regExp));
+      console.logz(txt.replace('ABC', 'hello'));
+
+      // 대문자가 있는 index를 찾아냄
+      let txt2 = 'abcdeHelloabcde';
+      let regExp2 = /[A-Z]/g; // [] 이것중에 하나
+      console.log(txt2.search(regExp2));
+
+      let txt3 = 'abcdeHelloabcde';
+      let regExp3 = /[A-Z]/g; // [] 이것중에 하나
+      console.log(txt2.replace(regExp2, 'h'));
+
+      // **************다시 보기***************
+      // JavaScript Markdown Parser
+      // https://codepen.io/kvendrik/pen/bGKeEE
+      // let md = '# hello world'
+      // md = md.replace(/[\#]{1} (.+)/g, '<h1>$1</h1>')
+      // md = md.replace(/[\#]{2} (.+)/g, '<h2>$1</h2>')
+      let md = '# hello world';
+      md = md.replace(/[\#]{1} (.+)/g, '<h1>$1</h1>');
+
+      let md2 = '# hello world';
+      md2 = md2.replace('# ', '<h1>') + '</h1>';
+    </script>
+  </body>
+</html>

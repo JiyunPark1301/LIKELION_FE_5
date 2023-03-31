@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>비교연산</title>
+  </head>
+  <body>
+    <script>
+      const x = 3;
+      const y = 7;
+
+      console.log(x > y); // false
+      console.log(x >= y); // false
+      console.log(x < y); // true
+      console.log(x <= y); // true
+      console.log(x == y); // false // 변수의 type을 확인하지 않음
+      console.log(x === y); // false // 권장 // 변수의 type을 확인
+      // 1. 견고한 코딩
+      // 2. 성능상에 이점
+      console.log(x != y); // true
+      console.log(x !== y); // true
+
+      console.log(3 != '3'); // false
+      console.log(3 !== '3'); // true
+    </script>
+  </body>
+</html>
