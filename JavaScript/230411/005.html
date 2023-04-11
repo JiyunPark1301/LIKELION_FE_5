@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <p>hello</p>
+    <script>
+      const target = document.querySelector('p');
+      const txtColor = target.style.color;
+      target.style.color = 'red';
+      target.style.fontWeight = 'bold';
+      target.style.color = null;
+      // style객체를 쓰면 inline style로 들어가게 되는데
+      // inline style은 가중치가 높으므로 classList를 통해 제어하자
+    </script>
+  </body>
+</html>
