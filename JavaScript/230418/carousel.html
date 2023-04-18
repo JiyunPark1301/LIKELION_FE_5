@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>포켓몬 캐러셀</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <article id="app">
+      <h2>포켓몬 캐러셀</h2>
+      <ul class="list-item">
+        <li>
+          <img
+            src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/jammanbo.png"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/ev.png?raw=true"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/mazayoung.png?raw=true"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/mobugi.png"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/nyaong.png"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/pulin.png"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/weirdseed.png"
+            alt=""
+          />
+        </li>
+      </ul>
+      <button type="button" class="prev">왼쪽</button>
+      <button type="button" class="next">오른쪽</button>
+    </article>
+    <script>
+      const prev = document.querySelector('.prev');
+      const next = document.querySelector('.next');
+      const ul = document.querySelector('.list-item');
+      const items = document.querySelectorAll('li');
+      const app = document.querySelector('#app');
+      let cnt = 0;
+      let isDragStart = false;
+
+      const moveSlide = (type) => {
+        if (type === 'prev') cnt++;
+        else if (type === 'next') cnt--;
+        ul.style.transform = `translate(-50%, -50%) rotateY(calc(360deg / 7 * ${cnt}))`;
+      };
+
+      prev.addEventListener('click', () => {
+        moveSlide('prev');
+      });
+      next.addEventListener('click', () => {
+        moveSlide('next');
+      });
+
+      // app.addEventListener('mousedown', (e) => {
+      //   isDragStart = true;
+      // });
+      // app.addEventListener('mousemove', (e) => {
+      //   if (!isDragStart) return;
+      //   ul.style.transform = `translate(-50%, -50%) rotateY(${e.clientX}deg)`;
+      //   console.log(e.clientX);
+      // });
+      // app.addEventListener('mouseup', (e) => {
+      //   isDragStart = false;
+      // });
+    </script>
+  </body>
+</html>
